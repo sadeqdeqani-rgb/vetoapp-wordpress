@@ -1,0 +1,270 @@
+@font-face {
+  font-family: "VetoApp BMitra";
+  src: url("../fonts/BMitra.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VetoApp BMitra";
+  src: url("../fonts/BMitra-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+.vetoapp-admin,
+.post-type-vetoapp_feature,
+.post-type-vetoapp_preview,
+.post-type-vetoapp_faq {
+  --veto-primary: #1a237e;
+  --veto-primary-dark: #101552;
+  --veto-primary-light: #e8eaf6;
+  --veto-teal: #008c95;
+  --veto-surface: #ffffff;
+  --veto-muted: #607d8b;
+  --veto-divider: #dde3ea;
+  font-family: "VetoApp BMitra", Tahoma, Arial, sans-serif;
+}
+
+.vetoapp-admin {
+  max-width: 1120px;
+  margin-top: 24px;
+  direction: rtl;
+}
+
+.vetoapp-admin .notice,
+.vetoapp-admin .updated,
+.vetoapp-admin .error {
+  margin-inline: 0;
+}
+
+.vetoapp-admin__hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 32px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--veto-primary), var(--veto-primary-dark));
+  border-radius: 24px;
+  box-shadow: 0 14px 30px rgb(26 35 126 / 20%);
+}
+
+.vetoapp-admin__hero h1 {
+  margin: 0;
+  color: inherit;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.vetoapp-admin__hero p {
+  max-width: 720px;
+  margin: 9px 0 0;
+  color: #e8eaf6;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.vetoapp-admin__eyebrow {
+  margin: 0 0 4px !important;
+  color: #c5cae9 !important;
+  font-size: 15px !important;
+  font-weight: 700;
+}
+
+.vetoapp-admin__badge {
+  flex: 0 0 auto;
+  padding: 8px 13px;
+  color: var(--veto-primary-dark);
+  background: #fff;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.vetoapp-admin__routes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.vetoapp-media-field {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.vetoapp-media-preview {
+  display: block;
+  width: 92px;
+  height: 92px;
+  margin-top: 12px;
+  object-fit: contain;
+  background: #f5f6fb;
+  border: 1px solid var(--veto-divider);
+  border-radius: 12px;
+}
+
+.vetoapp-admin__routes a {
+  display: block;
+  padding: 18px;
+  color: #263238;
+  background: var(--veto-surface);
+  border: 1px solid var(--veto-divider);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgb(38 50 56 / 5%);
+  text-decoration: none;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+.vetoapp-admin__routes a:hover,
+.vetoapp-admin__routes a:focus {
+  border-color: var(--veto-primary);
+  box-shadow: 0 8px 18px rgb(26 35 126 / 13%);
+  transform: translateY(-2px);
+}
+
+.vetoapp-admin__routes strong,
+.vetoapp-admin__routes span {
+  display: block;
+}
+
+.vetoapp-admin__routes strong {
+  color: var(--veto-primary-dark);
+  font-size: 20px;
+}
+
+.vetoapp-admin__routes span {
+  margin-top: 5px;
+  color: var(--veto-muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.vetoapp-admin__form {
+  padding: 4px 24px 24px;
+  background: var(--veto-surface);
+  border: 1px solid var(--veto-divider);
+  border-radius: 20px;
+}
+
+.vetoapp-admin__section {
+  border-bottom: 1px solid var(--veto-divider);
+}
+
+.vetoapp-admin__section:last-of-type {
+  border-bottom: 0;
+}
+
+.vetoapp-admin__section summary {
+  padding: 20px 0;
+  color: var(--veto-primary-dark);
+  cursor: pointer;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.vetoapp-admin__section summary::marker {
+  color: var(--veto-primary);
+}
+
+.vetoapp-admin .form-table {
+  margin-top: 0;
+}
+
+.vetoapp-admin .form-table th {
+  width: 240px;
+  padding-top: 17px;
+  color: #263238;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.vetoapp-admin .form-table td {
+  padding: 12px 10px;
+}
+
+.vetoapp-admin input,
+.vetoapp-admin textarea,
+.post-type-vetoapp_feature input,
+.post-type-vetoapp_feature textarea,
+.post-type-vetoapp_preview input,
+.post-type-vetoapp_preview textarea,
+.post-type-vetoapp_faq input,
+.post-type-vetoapp_faq textarea {
+  font-family: "VetoApp BMitra", Tahoma, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.vetoapp-admin input:focus,
+.vetoapp-admin textarea:focus {
+  border-color: var(--veto-primary);
+  box-shadow: 0 0 0 1px var(--veto-primary);
+}
+
+.vetoapp-admin .description {
+  color: var(--veto-muted);
+  font-size: 14px;
+}
+
+.vetoapp-admin .button-primary {
+  min-height: 40px;
+  padding: 4px 20px;
+  font-family: "VetoApp BMitra", Tahoma, Arial, sans-serif;
+  font-size: 18px;
+  background: var(--veto-primary);
+  border-color: var(--veto-primary);
+  border-radius: 10px;
+}
+
+.vetoapp-admin .button-primary:hover,
+.vetoapp-admin .button-primary:focus {
+  background: var(--veto-primary-dark);
+  border-color: var(--veto-primary-dark);
+}
+
+.vetoapp-admin__note {
+  margin: 18px 2px;
+  color: var(--veto-muted);
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .vetoapp-admin__routes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .vetoapp-admin__hero {
+    display: block;
+    padding: 23px;
+  }
+
+  .vetoapp-admin__badge {
+    display: inline-block;
+    margin-top: 14px;
+  }
+
+  .vetoapp-admin__routes {
+    grid-template-columns: 1fr;
+  }
+
+  .vetoapp-admin__form {
+    padding: 4px 15px 18px;
+  }
+
+  .vetoapp-admin .form-table th,
+  .vetoapp-admin .form-table td {
+    display: block;
+    width: 100%;
+    padding-inline: 0;
+  }
+}

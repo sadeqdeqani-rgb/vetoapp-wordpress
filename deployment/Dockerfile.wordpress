@@ -1,0 +1,21 @@
+ARG WORDPRESS_BASE_IMAGE=wordpress:7.1.1-php8.3-fpm-alpine
+
+FROM wordpress:cli-2.12.0-php8.3 AS wpcli
+
+FROM ${WORDPRESS_BASE_IMAGE}
+
+COPY --from=wpcli /usr/local/bin/wp /usr/local/bin/wp
+
+RUN apk add --no-cache mariadb-client openssl \
+    && chmod +x /usr/local/bin/wp
+
+COPY deployment/scripts/backup-wordpress.sh /usr/local/bin/vetoapp-wordpress-backup
+COPY deployment/scripts/backup-wordpress-loop.sh /usr/local/bin/vetoapp-wordpress-backup-loop
+COPY deployment/scripts/sync-theme.sh /usr/local/bin/vetoapp-wordpress-sync-theme
+COPY wordpress/vetoapp-landing /usr/src/wordpress/wp-content/themes/vetoapp-landing
+
+RUN chmod +x \
+        /usr/local/bin/vetoapp-wordpress-backup \
+        /usr/local/bin/vetoapp-wordpress-backup-loop \
+        /usr/local/bin/vetoapp-wordpress-sync-theme \
+    && chown -R www-data:www-data /usr/src/wordpress/wp-content/themes/vetoapp-landing
